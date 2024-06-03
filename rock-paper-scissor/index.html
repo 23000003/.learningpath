@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: #ffea00;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2%;
+            margin-right: 5%;
+        }
+
+        .container div{
+            margin-left: 35px;
+        }
+
+        .Score{
+            margin-right: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2%;
+        }
+
+        #scoreboard{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin-right: 35px;
+            margin-top: 2%;
+        }
+        #scoreboard h2{
+            margin-left: 35px;
+        }
+
+        .choices{
+            display: flex;
+            flex-direction: row;
+        }
+
+        button{
+            margin-top: 30px;
+            padding: 1em;
+            margin-left: 30%;
+        }
+
+        img{
+            cursor: pointer;
+        }
+        
+        img:hover{
+            transform: scale(1.1); 
+        }
+
+        .alert{
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(145, 145, 145, 0.548); 
+            position: fixed; 
+            top: 0%;
+            display: none;
+        }
+
+        .alert-label{
+            position: absolute;
+            top: 50%;
+            left: 47%;
+            transform: translate(-50%, -50%);
+            color: rgb(10, 255, 10);
+            font-size: 40px;
+            font-weight: 700;
+            
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="alert">
+        <div class="alert-label">
+            <h2 id="won">You Won</h2>
+            <!-- <button onclick="playGame()" style="margin-left: 30%;">Play Game</button> -->
+        </div>
+    </div>    
+
+    <div class="Score">
+        <h2 id="round">Round: 1 / 5</h2>
+        <div id = "scoreboard">
+            <h2 id="you">You: 0</h2>
+            <h2 id="bot">Bot: 0</h2>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="choices">
+            <div id="rock" onclick="playGame(0)">
+                <img src="rock.png" alt="">
+            </div>
+            <div id="scissor" onclick="playGame(1)">
+                <img src="scissor.png" alt="">
+            </div>
+            <div id="paper" onclick="playGame(2)">
+                <img src="paper.png" alt="">
+            </div>    
+        </div>
+    </div>
+
+
+    <script>
+
+        var humanScore = 0;
+        var computerScore = 0;
+        const humanS = document.getElementById("you");
+        const computerS = document.getElementById("bot");
+        const roundS = document.getElementById("round");
+        const alert = document.querySelector('.alert');
+        const alertwon = document.getElementById('won');
+
+
+        function getComputerChoice(){
+            return Math.floor(Math.random() * 3);
+        }
+
+        function playRound(humanChoice, computerChoice) {
+            let choice = ["Rock", "Scissor", "Paper"];
+            
+            console.log(`humanChoice = ${choice[humanChoice]}`);
+            console.log(`computerChoice = ${choice[computerChoice]}`);
+
+            alert.style.display = "block"
+            
+            const images = document.querySelectorAll("img");
+            images.forEach(image => {
+                image.style.transform = "none";
+            });
+
+            if(humanChoice == computerChoice){
+                alertwon.textContent = "TIE!"
+                alertwon.style.color = "white";
+                console.log("Tie!!");
+                console.log(`Human: ${humanScore}\nComputer: ${computerScore}`);
+                
+            }else{
+                if((choice[humanChoice] == "Rock" && choice[computerChoice] == "Scissor") ||
+                (choice[humanChoice] == "Scissor" && choice[computerChoice] == "Paper") ||
+                (choice[humanChoice] == "Paper" && choice[computerChoice] == "Rock")){
+                    
+                    alertwon.textContent = "You Won!"
+                    alertwon.style.color = "rgb(10, 255, 10)";
+                    console.log("Human Wins!");
+                    console.log(`Human: ${++humanScore}\nComputer: ${computerScore}`);
+                    humanS.textContent = `You: ${humanScore}`;
+                }
+                else{
+                    alertwon.textContent = "You Lost!"
+                    alertwon.style.color = "red";
+                    console.log("Computer Wins!");
+                    console.log(`Human: ${humanScore}\nComputer: ${++computerScore}`);
+                    computerS.textContent = `Bot: ${computerScore}`;
+                }
+            }
+
+            if(round != 5){
+                setTimeout(function() {
+                    alert.style.display = "none";
+                    roundS.textContent = `Round: ${++round} / 5`;
+                    const images = document.querySelectorAll("img");
+                    images.forEach(image => {
+                        image.addEventListener('mouseover', () =>{
+                            image.style.transform = "scale(1.1)";
+                        });
+                    });
+                }, 5000); 
+            }
+        }
+
+        let round = 1;
+        function playGame(val){
+            
+            playRound(val, getComputerChoice());
+
+            if(round == 5){
+                alert.style.display = "block"
+                if(humanScore > computerScore){
+                    alertwon.textContent = `You Won! ${humanScore} : ${computerScore}`;
+                    alertwon.style.color = "rgb(10, 255, 10)";
+                    console.log(`Human Wins! ${humanScore} : ${computerScore}`)
+                }
+                else if(humanScore < computerScore){
+                    alertwon.textContent = `You Lost! ${humanScore} : ${computerScore}`;
+                    alertwon.style.color = "red";
+                    console.log(`Computer Wins! ${humanScore} : ${computerScore}`)
+                }
+                else{
+                    alertwon.textContent = `TIE! ${humanScore} : ${computerScore}`;
+                    alertwon.style.color = "white";
+                    console.log(`TIE! ${humanScore} : ${computerScore}`)
+                }
+                const button = document.createElement('button')
+                button.innerHTML = "Play Again";
+                
+                button.addEventListener('click', () => {
+                    round = 0;
+                    roundS.textContent = `Round: ${++round} / 5`;
+                    humanScore = 0;
+                    computerScore = 0;
+                    humanS.textContent = 'You: 0';
+                    computerS.textContent = 'You: 0';
+                    alert.style.display = "none";
+                    button.style.display = "none"
+                });
+
+                document.querySelector('.alert-label').appendChild(button);
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>
