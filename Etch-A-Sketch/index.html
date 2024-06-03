@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        body{
+            background-color: rgb(54, 54, 54);
+            font-family: "Space Mono", monospace;
+        }
+
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1050px;
+            height: 600px;
+            display: flex;
+            flex: auto;
+        }
+
+        .label-container{
+            display: flex;
+            width: 350px;
+            height: 500px;
+            background-color: rgb(146, 146, 146);
+            box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.44);
+            -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.44);
+            -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.44);
+        }
+
+        .label{
+            display: flex;
+            flex-direction: column;
+            padding: 15%;
+        }
+
+        #sketch-cont{
+            background-color: white;
+            margin-left: 100px;
+            width: 600px;
+            height: 600px;
+            display: flex;
+            justify-content: stretch;
+            flex: 1 1 auto;
+            align-items: center;
+            flex-flow: column wrap;
+            box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.44);
+            -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.44);
+            -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.44);
+        }
+
+        .sketch-row{
+            min-width: 600px;
+            display: flex;
+            flex-flow: row wrap;
+            flex: auto;
+        }
+
+        .px{
+            flex: auto;
+        }
+
+        header{
+            margin-top: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 35px;
+            background-color: white;
+        }
+
+        .label label:nth-child(2){
+            margin-top: 35px;
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .label h2:nth-child(4){
+            margin-top: 35px;
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .label input:nth-child(6){
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        button{
+            margin-top: 35px;
+            padding: 1em;
+            text-transform: uppercase;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover{
+            background-color: grey;
+            color: white;
+        }
+
+        #pick-color{
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>By Kenny</header>
+
+    <div class="container">
+        <div class="label-container">
+            <div class="label">
+                <h2>Etch-A-Sketch</h2>
+                <label for="pick-color">Pick Color</label>
+                <input type="color" id="pick-color">
+                <h2>Pixel Size</h2>
+                <label for="pixel-range" id="pixel-value">16 x 16</label>
+                <input type="range" min="1" max="64" value="16" id="pixel-range">
+                <button onclick="borderstyle()">Put border</button>
+                <button onclick="clearall()">Clear All</button>
+            </div>
+        </div>
+
+        <div id="sketch-cont">
+            
+        </div>
+    </div>
+   
+    <script>
+
+        const color = document.getElementById("pick-color");
+        const pixelRange = document.getElementById("pixel-range");
+        const sketchBox = document.getElementById("sketch-cont");
+
+
+        pixelRange.addEventListener("input", pixelContainer);
+
+        function pixelContainer(){
+            const pixels = pixelRange.value;
+
+            sketchBox.innerHTML = "";
+            document.getElementById('pixel-value').textContent = pixels + " x " + pixels;
+
+            displaypixels(pixels);
+        }
+
+        let border = false;
+        
+        function borderstyle(){
+            const px = document.querySelectorAll('.px');
+            
+            if(border == false){
+                px.forEach(px => {
+                    px.style.border = "1px solid black";
+                });
+                border = true;   
+            }else{
+                px.forEach(px => {
+                    px.style.border = "none";
+                });
+                border = false;
+            }
+            console.log(border);
+        }
+
+        document.addEventListener("DOMContentLoaded", () =>{
+            displaypixels(16);
+        });
+
+        function displaypixels(px){
+
+            for(let x = 0; x < px; x++){
+                const row = document.createElement('div');
+                row.classList.add('sketch-row');
+                for(let y = 0; y < px; y++){
+                    const rowpx = document.createElement('div');
+                    rowpx.classList.add('px');
+                    row.appendChild(rowpx);
+
+                    if(border == true){
+                        rowpx.style.border = "1px solid black";
+                    }
+                }
+                sketchBox.appendChild(row);
+            }
+        }
+                                            
+        sketchBox.addEventListener("mouseover", (event) => {
+            const px = event.target;
+            if (px.classList.contains('px')) {
+                px.style.backgroundColor = color.value;
+            }
+        });
+
+        function clearall(){
+            const px = document.querySelectorAll('.px');
+
+            px.forEach(px =>{
+                px.style.backgroundColor = "white";
+            });
+        }
+    </script>
+</body>
+</html>
