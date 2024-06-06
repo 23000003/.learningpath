@@ -1,0 +1,132 @@
+.Names{
+  margin-top: 50px;
+  line-height: 29px;
+  width: 600px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 1em;
+  display: flex;
+  align-content: center;
+  cursor: pointer;
+}
+
+.Names:hover{
+  transform: scale(1.05);
+}
+
+.Container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image{
+  width: 250px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img{
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.Data{
+  width: 350px;
+  height: 300px;
+  align-content: center;
+  font-size: 15px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.button{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1em 2em 1em 2em;
+  cursor: pointer;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+}
+
+
+.Data input:disabled{
+  background-color: white;
+  border: none;
+  color: black;
+}
+
+.Delete{
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 520px;
+}
+
+.buttonAdd{
+  margin: 35px auto auto auto;
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.buttonAdd:hover{
+  background-color: black;
+  color: white;
+}
+
+.Delete button{
+  padding: 0.5em 1em 0.5em 1em;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.Delete button:hover{
+  background-color: black;
+  color: white;
+}
+
+.PostDetails{
+  position: fixed;
+  width: 500px;
+  height: 700px;
+  background-color: rgb(244, 255, 255);
+  top: 100px;
+  display: none;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.Post-labels{
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+  font-weight: 600;
+}
+
+.Post-labels label{
+  margin-top: 35px;
+}
+
+.opacity{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(122, 122, 122, 0.534);
+  position: fixed;
+  display: none;
+}

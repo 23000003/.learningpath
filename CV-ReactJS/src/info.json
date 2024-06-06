@@ -1,0 +1,40 @@
+[
+    {
+        "id": "1",
+        "Fname": "Kenny",
+        "Lname": "Maratas",
+        "Course": "BS Information Technology",
+        "Year": "Second Year",
+        "University": "University of San Carlos",
+        "Address": "Sugar Valley, Mandaue",
+        "ContactNumber": "09952813643",
+        "Department": "DCISM",
+        "picture": "Binayot.png"
+    },
+
+    {
+        "id": "2",
+        "Fname": "Joe",
+        "Lname": "Harry",
+        "Course": "BS Mechanical Engineering",
+        "Year": "Second Year",
+        "University": "Cebu Institute of Technology",
+        "Address": "Lamac, Consolacion",
+        "ContactNumber": "0991235485",
+        "Department": "Engineering",
+        "picture": "Joe.jpg"
+    },
+
+    {
+        "id": "3",
+        "Fname": "Ziryll",
+        "Lname": "Majarocoon",
+        "Course": "BS Civil Engineering",
+        "Year": "Third Year",
+        "University": "University of Cebu",
+        "Address": "Cansaga, Consolacion",
+        "ContactNumber": "09487212354",
+        "Department": "Engineering",
+        "picture": "Lol.jpg"
+    }
+]
