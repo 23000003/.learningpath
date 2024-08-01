@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+<body>
+    <%- include('./components/navbar') %> 
+    <main class="mt-20">
+        <div class="flex flex-col justify-center w-full items-center">
+            <div class="mb-20 text-3xl">
+                <a href="/items" class="mr-5">Items</a>
+                <a href="/category">Categories</a>
+            </div>
+            <div class="flex flex-row gap-12 text-lg flex-wrap justify-center">
+                <% item.forEach((item, index) => { %>
+                    <div>
+                        <h3>Name: <%= item.item_name %></h3>
+                        <h3>Category: <%= item.cat_name %></h3>
+                        <a href="/items/<%= index %>">View Item</a>
+                    </div>
+                <% }) %>
+        </div>
+    </main>
+</body>
+</html>

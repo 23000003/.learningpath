@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+<body>
+    <%- include('./components/navbar') %> 
+    <main class="mt-20">
+        <div class="flex flex-col justify-center w-full items-center">
+            <div class="mb-20 text-3xl">
+                <form action="/create" method="POST">
+                    <label for="name"><input type="text" id=""name></label>
+                    <label for="category"><input type="text" id="category"></label>
+                    <button type="submit">Create</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
