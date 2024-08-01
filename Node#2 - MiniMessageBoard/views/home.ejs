@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../components/navbar') %> 
+
+    <% messages.forEach((message, index) => { %>
+        <h3>Name: <%= message.user %></h3>
+        <h3>Message: <%= message.text %></h3>
+        <h5>Date: <%= message.added %></h5>
+        <a href="/view/<%= index %>">View Message</a>
+    <% }) %>
+</body>
+</html>
