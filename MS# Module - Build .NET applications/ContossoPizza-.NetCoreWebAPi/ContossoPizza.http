@@ -1,0 +1,60 @@
+@ContossoPizza_HostAddress = http://localhost:5189
+
+### This is like postman
+### Install first REST CLient
+
+GET {{ContossoPizza_HostAddress}}/weatherforecast/
+Accept: application/json
+###
+
+GET {{ContossoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+###
+
+GET {{ContossoPizza_HostAddress}}/pizza/1
+Accept: application/json
+
+###
+
+GET {{ContossoPizza_HostAddress}}/pizza/5 
+Accept: application/json
+###Outputs Not Found since theres no existing pizza
+###
+
+POST {{ContossoPizza_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+    "name": "Hawaii",
+    "isGlutenFree": false
+}
+
+###
+
+PUT {{ContossoPizza_HostAddress}}/pizza/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Hawaiian",
+    "isGlutenFree": false
+}
+
+### Returns No Content
+
+GET {{ContossoPizza_HostAddress}}/pizza/3
+Accept: application/json
+
+### Has data now since we posted
+
+
+DELETE {{ContossoPizza_HostAddress}}/pizza/3
+
+### Returns No Content
+
+GET {{ContossoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+### Verify the removal
+
