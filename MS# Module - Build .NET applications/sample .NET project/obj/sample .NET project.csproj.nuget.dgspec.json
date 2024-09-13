@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\sample .NET project\\sample .NET project.csproj": {}
+    "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\sample .NET project\\sample .NET project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\sample .NET project\\sample .NET project.csproj": {
+    "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\sample .NET project\\sample .NET project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\sample .NET project\\sample .NET project.csproj",
+        "projectUniqueName": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\sample .NET project\\sample .NET project.csproj",
         "projectName": "sample .NET project",
-        "projectPath": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\sample .NET project\\sample .NET project.csproj",
+        "projectPath": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\sample .NET project\\sample .NET project.csproj",
         "packagesPath": "C:\\Users\\Kenny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\sample .NET project\\obj\\",
+        "outputPath": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\sample .NET project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kenny\\AppData\\Roaming\\NuGet\\NuGet.Config",

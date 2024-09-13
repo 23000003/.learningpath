@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj": {}
+    "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj": {
+    "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj",
+        "projectUniqueName": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj",
         "projectName": "ContossoPizza",
-        "projectPath": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj",
+        "projectPath": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj",
         "packagesPath": "C:\\Users\\Kenny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\ContossoPizza-.NetCoreWebAPi\\obj\\",
+        "outputPath": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\ContossoPizza-.NetCoreWebAPi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kenny\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5WL0s5+viTw=",
+  "dgSpecHash": "MKCPWoualjI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj",
+  "projectFilePath": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\ContossoPizza-.NetCoreWebAPi\\ContossoPizza.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kenny\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Kenny\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\DotNetDebugging\\DotNetDebugging.csproj": {}
+    "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\.NetDebugging\\DotNetDebugging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\DotNetDebugging\\DotNetDebugging.csproj": {
+    "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\.NetDebugging\\DotNetDebugging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\DotNetDebugging\\DotNetDebugging.csproj",
+        "projectUniqueName": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\.NetDebugging\\DotNetDebugging.csproj",
         "projectName": "DotNetDebugging",
-        "projectPath": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\DotNetDebugging\\DotNetDebugging.csproj",
+        "projectPath": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\.NetDebugging\\DotNetDebugging.csproj",
         "packagesPath": "C:\\Users\\Kenny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kenny\\Desktop\\Module - WebAPi .Net\\DotNetDebugging\\obj\\",
+        "outputPath": "C:\\Users\\Kenny\\Desktop\\Odin-Practice-Projects\\MS# Module - Build .NET applications\\.NetDebugging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kenny\\AppData\\Roaming\\NuGet\\NuGet.Config",
